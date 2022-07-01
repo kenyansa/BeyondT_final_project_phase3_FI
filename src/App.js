@@ -22,6 +22,9 @@ const App = () => {
         setTodos = {setTodos}
         />
       </div>
+      <div>
+        <TodoList todos = {todos} setTodos = {setTodos} />
+      </div>
     </div>
   </div>
   );
