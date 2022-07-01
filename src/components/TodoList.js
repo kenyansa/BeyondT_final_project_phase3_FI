@@ -25,7 +25,7 @@ const TodoList = ({todos, setTodos, setEditTodo}) => {
             <li className='list-item' key={todo.id}>
                 <input type="text" 
                 value={todo.title} 
-                className="list" 
+                className={`list ${todo.completed ? "complete" : ""}` }
                 onChange={(event)=> 
                 event.preventDefault()} />
                 <div>
