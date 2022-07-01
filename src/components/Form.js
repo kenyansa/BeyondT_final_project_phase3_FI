@@ -1,4 +1,5 @@
 import React from 'react'
+import {v4 as uuidv4} from 'uuid';
 
 const Form = ({input, setInput, todos, setTodos}) => {
     const onInputChange = (event) => {
@@ -6,6 +7,8 @@ const Form = ({input, setInput, todos, setTodos}) => {
     }
     const onFormSubmit= (event) =>{
         event.preventDefault();
+        setTodos([...todos, {id: uuidv4(), title: input, completed: false}]);
+        setInput("");
     };
   return (
     <form onSubmit={onFormSubmit}>
