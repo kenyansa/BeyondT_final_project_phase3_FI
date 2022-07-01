@@ -1,6 +1,10 @@
 import React from 'react'
 
 const TodoList = ({todos, setTodos}) => {
+    const handleDelete = ({id}) => {
+        setTodos(todos.filter((todo) =>todo.id !== id));
+    };
+
   return (
     <div>
         {todos.map((todo)=>(
@@ -13,7 +17,7 @@ const TodoList = ({todos, setTodos}) => {
                 <div>
                     <button className='button-complete'>Done</button>
                     <button className='button-edit'>Edit</button>
-                    <button className='button-delete'>Del</button>
+                    <button className='button-delete' onClick={()=>handleDelete(todo)}>Del</button>
                 </div>
             </li>
         ))}
