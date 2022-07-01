@@ -5,7 +5,9 @@ import './App.css';
 const App = () => {
   return (<div className='container'>
     <div className='app-wrapper'>
-      <Header/>
+      <div>
+         <Header />
+      </div>
     </div>
   </div>
   );
