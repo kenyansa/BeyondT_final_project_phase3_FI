@@ -7,14 +7,19 @@ const App = () => {
 
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
-  
+
   return (<div className='container'>
     <div className='app-wrapper'>
       <div>
          <Header />
       </div>
       <div>
-        <Form />
+        <Form 
+        input = {input}
+        setInput= {setInput}
+        todos = {todos}
+        setTodos = {setTodos}
+        />
       </div>
     </div>
   </div>
