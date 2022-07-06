@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+// import Axios from 'axios'; 
 
 const TodoList = ({todos, setTodos, setEditTodo}) => {
     const handleComplete = (todo) => {
@@ -18,6 +19,12 @@ const TodoList = ({todos, setTodos, setEditTodo}) => {
     const handleDelete = ({id}) => {
         setTodos(todos.filter((todo) =>todo.id !== id));
     };
+
+    // const getData = () => {
+    //     Axios.get("http://localhost:9292/users").then((response) => {
+    //         console.log(response);
+    //     })
+    // }
 
   return (
     <div>

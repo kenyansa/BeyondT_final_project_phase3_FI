@@ -8,7 +8,7 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
         );
         setTodos(newTodo);
         setEditTodo("");
-    }
+    };
 
     useEffect(()=>{
         if(editTodo){
@@ -33,9 +33,13 @@ const Form = ({input, setInput, todos, setTodos, editTodo, setEditTodo}) => {
     };
   return (
     <form onSubmit={onFormSubmit}>
-        <input type="text" placeholder="Enter your next task..." className='task-input' value = {input} required onChange={onInputChange} />
+        <input type="text" 
+        placeholder="Enter your next task..." 
+        className='task-input' 
+        value = {input} required 
+        onChange={onInputChange} />
         <button className='button-add' type="submit">
-            {editTodo ? "OK" : "Add" }
+            {editTodo ? "Ok" : "Add" }
         </button>
     </form>
   )
